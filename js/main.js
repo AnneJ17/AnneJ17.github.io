@@ -1,4 +1,21 @@
 /**
+ * Adding functionality to the toggle button
+ * @type {Element}
+ */
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelectorAll('.nav__link');
+
+navToggle.addEventListener('click', () => {
+    document.body.classList.toggle('nav-open');
+});
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        document.body.classList.remove('nav-open');
+    })
+})
+
+/**
  * JavaScript for the experience section tab list
  * @param tabIndex
  * @returns {HTMLCollectionOf<Element>}
