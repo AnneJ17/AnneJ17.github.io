@@ -372,7 +372,7 @@ a.nav__link {
         justify-self: center;
     }
     .tabs {
-        justify-content: center;
+        padding: 30px 30px;
     }
 }
 
@@ -434,6 +434,16 @@ a.nav__link {
     left:227px;
     top:80px;
     transition:all 500ms ease-in-out;
+}
+
+.section__subtitle--container li::before {
+    content: "▹";
+    position: relative;
+    left: 0;
+    color: var(--clr-accent);
+    font-size: 17px;
+    line-height: 12px;
+    padding: 0 10px 0 0;
 }
 
 /* ============== contact section ============== */
