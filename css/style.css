@@ -120,7 +120,7 @@ h1 { font-size: var(--fs-h1); font-family: Monaco, monospace; }
     }
 }
 
-a {
+a:not(.email_linkWrapper) {
     font-size: var(--fs-body);
     font-family: Monaco, monospace;
     font-weight: bold;
@@ -530,13 +530,19 @@ a :hover,
 
     .side_styleContainer .email_linkWrapper::after {
         content: "";
-        display: block;
+        display: inline-block;
         width: 1px;
-        height: 12em;
-        background-color: var(--clr-accent);
-        margin: 0 auto;
+        height: 10em;
+        background-color: var(--clr-light);
+        margin: 10px auto 0;
+    }
+
+    .email_linkWrapper .link {
+        color: var(--clr-light);
+        font-size: 15px;
     }
 }
+
 @media(max-width: 843px) {
     .side_styleContainer {
         display: none;
