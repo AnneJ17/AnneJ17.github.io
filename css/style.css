@@ -12,7 +12,7 @@
     --fw-reg: 300;
     --fw-bold: 700;
 
-    --clr-bg: #E4E6EB;
+    --clr-bg: #F1F1F3;
     --clr-dark-bg: #E6D9CE;
     --clr-darkest-bg: #CCBFB4;
     --clr-text: #323439;
@@ -108,8 +108,18 @@ h3 {
 }
 
 h1 { font-size: var(--fs-h1); font-family: Monaco, monospace; }
-h2 { font-size: var(--fs-h2) }
-h3 { font-size: var(--fs-h3) }
+
+@media (min-width: 900px) {
+    h2 { font-size: var(--fs-h2) }
+    h3 { font-size: var(--fs-h3) }
+}
+
+@media (max-width: 900px) {
+    h2,
+    h3 {
+        font-size: 20px;
+    }
+}
 
 a {
     font-size: var(--fs-body);
