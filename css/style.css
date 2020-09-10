@@ -333,6 +333,13 @@ a.nav__link {
 .about__img {
     box-shadow: var(--bs);
     padding: .75em;
+    -webkit-filter: brightness(65%) sepia(1) hue-rotate(174deg);
+    filter: brightness(65%) sepia(1) hue-rotate(174deg);
+}
+
+.image-holder img:hover{
+    filter: none;
+    opacity: 1;
 }
 
 .image-holder {
