@@ -40,6 +40,71 @@
     }
 }
 
+h1 { font-family: Monaco, monospace; font-size: var(--fs-h1); }
+
+@media only screen and (min-width: 1024px), (max-width: 1024px) {
+    .main-container {
+        padding: 0 120px;
+    }
+    .intro {
+        padding: 10em 3.125em;
+    }
+    .intro h2,
+    .intro h3 {
+        font-size: 70px;
+    }
+    section {
+        padding: 7em 4.125em;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .main-container {
+        padding: 0 50px;
+    }
+    .intro {
+        padding: 12em 3.125em;
+    }
+    section {
+        padding: 8em 0em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .intro {
+        padding: 7em 0em;
+    }
+    .intro h2,
+    .intro h3 {
+        font-size: 35px;
+    }
+    section {
+        padding: 6em 0em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .intro {
+        padding: 7em 0em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .intro {
+        padding: 5em 0em;
+    }
+    .intro h1 {
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+    section {
+        padding: 7em 0em;
+    }
+
+/*    make the button small*/
+}
+
 /* General styles */
 html {
     scroll-behavior: smooth;    
@@ -53,22 +118,6 @@ body {
     -webkit-font-smoothing: antialiased;
     line-height: 1.6;
     margin-top: 90px;
-}
-
-.main-container {
-    padding: 0 120px;
-}
-
-@media screen and (min-width: 834px) {
-    section {
-        padding: 11em 4.125em;
-    }
-}
-
-@media screen and (max-width: 834px) {
-    section {
-        padding: 7em 0em;
-    }
 }
 
 p {
@@ -106,21 +155,7 @@ h3 {
     margin: 0;
 }
 
-h1 { font-size: var(--fs-h1); font-family: Monaco, monospace; }
-
-@media (min-width: 900px) {
-    h2 { font-size: var(--fs-h2) }
-    h3 { font-size: var(--fs-h3) }
-}
-
-@media (max-width: 900px) {
-    h2,
-    h3 {
-        font-size: 20px;
-    }
-}
-
-a:not(.email_linkWrapper) {
+a {
     font-size: var(--fs-body);
     font-family: Monaco, monospace;
     font-weight: bold;
@@ -197,7 +232,7 @@ nav {
 }
 
 a.nav__link {
-    margin: 0 10px 10px;
+    margin: 0 15px 15px;
 }
 
 .nav__resume {
@@ -270,7 +305,7 @@ a.nav__link {
         flex-direction: column;
         background-color: var(--clr-dark-bg);
         padding: 50px;
-        width: 37%;
+        width: 41%;
         top: 90px;
         height: 100%;
         right: 0px;
@@ -484,7 +519,7 @@ a.nav__link {
     flex-direction: column;
     background: var(--clr-dark-bg);
     text-align: center;
-    padding: 2em 0;
+    padding: 3em;
 }
 
 .metadata {
