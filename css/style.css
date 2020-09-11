@@ -86,23 +86,43 @@ h1 { font-family: Monaco, monospace; font-size: var(--fs-h1); }
 
 @media screen and (max-width: 500px) {
     .intro {
-        padding: 7em 0em;
+        padding: 8em 0em;
     }
 }
 
 @media screen and (max-width: 400px) {
+    .main-container {
+        padding: 0 32px;
+    }
     .intro {
-        padding: 5em 0em;
+        padding: 7em 0em;
     }
     .intro h1 {
         font-size: 16px;
         padding-bottom: 5px;
     }
     section {
-        padding: 7em 0em;
+        padding: 6em 0em;
     }
-
-/*    make the button small*/
+    /*    make the button small*/
+    .nav__resume,
+    .email,
+    .contact-btn {
+        display: inline-block;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--clr-accent);
+        border-radius: 3px;
+    }
+    .email,
+    .contact-btn {
+        margin-top: 50px;
+        padding: 1rem 1.25rem;
+    }
+    .email a,
+    .contact-btn a{
+        font-size: 12px;
+    }
 }
 
 /* General styles */
@@ -337,21 +357,22 @@ a.nav__link {
     opacity: 0;
 }
 
+@media screen and (min-width: 400px) {
+    .nav__resume,
+    .email,
+    .contact-btn {
+        display: inline-block;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--clr-accent);
+        border-radius: 3px;
+    }
 
-.nav__resume,
-.email,
-.contact-btn {
-    display: inline-block;
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--clr-accent);
-    border-radius: 3px;
-}
-
-.email,
-.contact-btn {
-    margin-top: 50px;
-    padding: 1.25rem 1.75rem;
+    .email,
+    .contact-btn {
+        margin-top: 50px;
+        padding: 1.25rem 1.75rem;
+    }
 }
 
 .section__title--name,
