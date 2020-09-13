@@ -1,16 +1,11 @@
-*,
-*::before,
-*::after {
+*,*::before,*::after {
     box-sizing: border-box;
 }
-
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Source Code Pro', monospace;
-
     --fw-reg: 300;
     --fw-bold: 700;
-
     --clr-bg: #00233F;
     --clr-dark-bg: #00233F;
     --clr-darkest-bg: #15425E;
@@ -18,126 +13,20 @@
     --clr-text: #BBC5E3;
     --clr-light: #8892B0;
     --clr-accent: #D2B491;
-
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
+    --fs-h1:3.75;
+    --fs-h2: 2.35rem;
     --fs-h3: 1.75rem;
     --fs-h4: 1.25rem;
-    --fs-h5: 1.125rem;
+    --fs-h5: 1.15rem;
     --fs-body: 1rem;
-
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.35);
 }
 
-@media (min-width: 800px) {
-    :root {
-        --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
-        --fs-h3: 2.7rem;
-        --fs-h4: 1.35rem;
-        --fs-h5: 1.25rem;
-        --fs-body: 1.05rem;
-    }
-}
+/* ============ GENERAL STYLES ============ */
 
-h1 { font-family: Monaco, monospace; font-size: var(--fs-h1); }
-h3 {font-size: 1.75rem}
-h4 {font-size: 1.25rem}
-
-@media only screen and (min-width: 1024px), (max-width: 1024px) {
-    .main-container {
-        padding: 0 120px;
-    }
-    .intro {
-        padding: 10em 3.125em;
-    }
-    .intro h2,
-    .intro h3 {
-        font-size: 70px;
-    }
-    section {
-        padding: 7em 4.125em;
-    }
-}
-
-@media screen and (max-width: 983px) {
-    .main-container {
-        padding: 0 70px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .main-container {
-        padding: 0 50px;
-    }
-    .intro {
-        padding: 12em 3.125em;
-    }
-    section {
-        padding: 10em 0;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .intro {
-        padding: 7em 0;
-    }
-    .intro h2,
-    .intro h3 {
-        font-size: 35px;
-    }
-    section {
-        padding: 6em 0;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .intro {
-        padding: 8em 0;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .main-container {
-        padding: 0 32px;
-    }
-    .intro {
-        padding: 7em 0;
-    }
-    .intro h1 {
-        font-size: 16px;
-        padding-bottom: 5px;
-    }
-    section {
-        padding: 6em 0;
-    }
-
-    /*    make the button small*/
-    .nav__resume,
-    .email,
-    .contact-btn {
-        display: inline-block;
-        border-width: 1px;
-        border-style: solid;
-        border-color: var(--clr-accent);
-        border-radius: 3px;
-    }
-    .email,
-    .contact-btn {
-        margin-top: 50px;
-        padding: 1rem 1.25rem;
-    }
-    .email a,
-    .contact-btn a{
-        font-size: 12px;
-    }
-}
-
-/* General styles */
 html {
-    scroll-behavior: smooth;    
+    scroll-behavior: smooth;
 }
-
 body {
     background: var(--clr-bg);
     color: var(--clr-text);
@@ -147,7 +36,16 @@ body {
     line-height: 1.6;
     margin-top: 90px;
 }
-
+h1,h2,h3 {
+    line-height: 1.1;
+    margin: 0;
+}
+h4 {
+    font-size: 1.25rem
+}
+h4,h5 {
+    margin-block-end: 1em;
+}
 p {
     display: block;
     max-width: 650px;
@@ -156,80 +54,12 @@ p {
     margin-inline-start: 0;
     margin-inline-end: 0;
 }
-
-ul,
-ol {
+ul,ol {
     list-style: none;
-}
-
-/* overrode the method in the imported stylesheet */
-ul {
     padding-inline-start: 0;
 }
 
-img {
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-/* Typography */
-
-h1,
-h2,
-h3 {
-    line-height: 1.1;
-    margin: 0;
-}
-
-h4,
-h5 {
-    margin-block-end: 1em;
-}
-
-a {
-    font-size: var(--fs-body);
-    font-family: Monaco, monospace;
-    font-weight: bold;
-    color: var(--clr-accent);
-    text-decoration: none;
-}
-
-.section__title {
-    color: var(--clr-heading);
-}
-
-.section__title--about::after,
-.section__title--experiences::after {
-    display: inline-block;
-    content: "";
-    border-top: .15rem solid var(--clr-darkest-bg);
-    width: 11rem;
-    margin: 0 1rem;
-    transform: translateY(-.5rem);
-}
-
-.section__title--intro
- {
-    font-size: var(--fs-body);
-    color: var(--clr-accent);
-}
-
-.section__title--about,
-.section__title--experiences,
-.section__title--contact {
-    margin-bottom: 1rem;
-}
-
-
-.section__subtitle {
-    margin: 0;
-    font-size: var(--fs-body);
-}
-
-
-/*  Navigation and Intro */
+/* ========================= HEADER ========================= */
 header {
     position: fixed;
     height: 90px;
@@ -242,36 +72,24 @@ header {
     top: 0;
     z-index: 10;
 }
-
-.logo {
-    max-width: 100px;
-	display: flex;
-	vertical-align: middle;
-    z-index: 2;
-}
-
 nav {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
     -webkit-box-align: center;
     position: relative;
-	transform: translateX(0%);
+    transform: translateX(0%);
 }
-
 .nav ol {
     display: flex;
 }
-
 a.nav__link {
     margin: 0 15px 15px;
 }
-
 .nav__resume {
     padding: 0.85rem .5rem;
     margin: 0;
 }
-
 /* Hamburger toggle button for small screen size */
 .nav-toggle {
     padding: .5em;
@@ -279,40 +97,266 @@ a.nav__link {
     cursor: pointer;
     background: transparent;
 }
-
 .hamburger {
     display: block;
     position: relative;
 }
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
+.hamburger,.hamburger::before,.hamburger::after {
     background: var(--clr-accent);
     width: 2em;
     height: 3px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
 }
-
-.hamburger::before,
-.hamburger::after {
+.hamburger::before,.hamburger::after {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
 }
+.hamburger::before {
+    top: 6px;
+}
+.hamburger::after {
+    bottom: 6px;
+}
+.nav-open .nav{
+    transform: translateX(0);
+}
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+/* One of the line in the hamburger is made invisible*/
+.nav-open .hamburger::after {
+    opacity: 0;
+}
 
-.hamburger::before { top: 6px; }
-.hamburger::after { bottom: 6px; }
+/*   ==================================================
+                          SECTIONS
+     ==================================================   */
 
+.section__title {
+    font-size: 1.75rem;
+    margin-bottom: 1.7rem;
+    color: var(--clr-heading);
+}
+.section__title--intro {
+    font-family: Monaco, monospace;
+    font-size: var(--fs-h1);
+    font-size: var(--fs-body);
+    color: var(--clr-accent);
+}
+.section__title--name,.section__title--passion {
+    font-size: 70px;
+}
+.section__title--passion {
+    color: var(--clr-light);
+}
+.section__title--about::after,.section__title--experiences::after {
+    display: inline-block;
+    content: "";
+    border-top: .15rem solid var(--clr-darkest-bg);
+    width: 11rem;
+    margin: 0 1rem;
+    transform: translateY(-.5rem);
+}
+
+/* ========================= ABOUT ========================= */
+
+.section__subtitle--container--skills {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(120px, 200px));
+}
+.section__subtitle--container--skills li::before {
+    content: "✫";
+    position: relative;
+    left: 0;
+    color: var(--clr-accent);
+    font-size: 10px;
+    line-height: 15px;
+    padding: 12px 12px;
+}
+
+/* ========================= EXPERIENCES ========================= */
+
+.my-experiences {
+    position: relative;
+    margin: 0 auto;
+    max-width: 900px;
+}
+.tabs {
+    display: block;
+    position:relative;
+    max-width:700px;
+    height: 55vh;
+    padding: 0;
+}
+.tabs .tab-header > div:hover,.tabs .tab-header > div.active {
+    color:var(--clr-accent);
+}
+.tabs .tab-header {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.tabs .tab-content {
+    position:relative;
+    height:100%;
+    overflow-x: scroll;
+}
+.tabs .tab-content > div.active {
+    top:0;
+    transform: scale(1);
+}
+.section__subtitle--container li::before {
+    content: "✫";
+    position: relative;
+    left: 0;
+    color: var(--clr-accent);
+    font-size: 10px;
+    line-height: 15px;
+    padding: 10px 10px;
+}
+
+/* ========================= CONTACT ========================= */
+
+.my-contact {
+    text-align: center;
+    max-width: 600px;
+    padding: 150px 0;
+    margin: 0 auto 100px;
+}
+
+/* ========================= FOOTER ========================= */
+
+.footer__container {
+    display: flex;
+    width: 100%;
+    min-height: 70px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--clr-dark-bg);
+    text-align: center;
+    padding: 3em;
+}
+.metadata {
+    color: var(--clr-accent);
+    font-weight: 500;
+    font-size: var(--fs-body);
+    font-family: Monaco, monospace;
+}
+.social-list {
+    display: flex;
+    justify-content: center;
+}
+.social-list__link {
+    margin: 0 7px;
+}
+.social-list__item {
+    margin: 0 1em;
+}
+/* ============ IMAGES ============ */
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.logo {
+    max-width: 100px;
+    display: flex;
+    vertical-align: middle;
+    z-index: 2;
+}
+.about__img {
+    box-shadow: var(--bs);
+    padding: .75em;
+    -webkit-filter: brightness(65%) sepia(1) hue-rotate(174deg);
+    filter: brightness(65%) sepia(1) hue-rotate(174deg);
+}
+.image-holder img:hover{
+    filter: none;
+    opacity: 1;
+}
+.image-holder {
+    padding: 1.3em 0 0 .85em;
+}
+
+/* ============ LINKS ============ */
+a {
+    font-size: var(--fs-body);
+    font-family: Monaco, monospace;
+    font-weight: bold;
+    color: var(--clr-accent);
+    text-decoration: none;
+}
+a :hover,
+.social-list__link:hover,
+.email:hover,
+.nav__link:hover,
+.nav__resumeButton:hover,
+.email_linkWrapper:hover,
+.contact-btn:hover {
+    opacity: .7;
+}
+
+/*   ==================================================
+                          MEDIA
+     ==================================================   */
+
+@media only screen and (min-width: 1024px), (max-width: 1024px) {
+    .main-container {
+        padding: 0 120px;
+    }
+    .intro {
+        padding: 10em 3.125em;
+    }
+    section {
+        padding: 7em 4.125em;
+    }
+}
+@media screen and (max-width: 983px) {
+    .main-container {
+        padding: 0 70px;
+    }
+}
+@media (min-width: 980px) {
+    /*  About Section  */
+    .about-flexbox {
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        align-items: flex-start;
+    }
+    .about__img {
+        min-width: 250px;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 900px) {
+    .main-container {
+        padding: 0 50px;
+    }
+    .intro {
+        padding: 12em 3.125em;
+    }
+    section {
+        padding: 10em 0;
+    }
+}
 @media screen and (max-width:843px) {
-    /*  Display hamburger button   */
-   .nav-toggle {
-       display: inline-block;
-       z-index: 1000;
-   }
-    /*  Hide nav links   */
+    /* Display hamburger button */
+    .nav-toggle {
+        display: inline-block;
+        z-index: 1000;
+    }
     .nav ol {
         display: flex;
         flex-direction: column;
@@ -344,110 +388,83 @@ a.nav__link {
         transform: translateX(100%);
         transition: transform 0.5s;
     }
+    /*    Styling   */
+    .side_styleContainer {
+        display: none;
+    }
 }
-@media screen and (min-width:843px) {
+@media(min-width: 843px) {
     /* Display navigation links */
     .nav-toggle {
         display: none;
     }
-}
-
-.nav-open .nav{
-    transform: translateX(0);
-}
-
-.nav-open .hamburger {
-    transform: rotate(.625turn);
-}
-
-.nav-open .hamburger::before {
-    transform: rotate(90deg) translateX(-6px);
-}
-
-/* One of the line in the hamburger is made invisible*/
-.nav-open .hamburger::after {
-    opacity: 0;
-}
-
-@media screen and (min-width: 400px) {
-    .nav__resume,
-    .email,
-    .contact-btn {
-        display: inline-block;
-        border-width: 1px;
-        border-style: solid;
-        border-color: var(--clr-accent);
-        border-radius: 3px;
-    }
-
-    .email,
-    .contact-btn {
-        margin-top: 50px;
-        padding: 1.25rem 1.75rem;
-    }
-}
-
-.section__title--name,
-.section__title--passion {
-    font-size: 70px;
-}
-
-.section__title--passion {
-    color: var(--clr-light);
-}
-
-/* ================ about ============== */
-
-.about__img {
-    box-shadow: var(--bs);
-    padding: .75em;
-    -webkit-filter: brightness(65%) sepia(1) hue-rotate(174deg);
-    filter: brightness(65%) sepia(1) hue-rotate(174deg);
-}
-
-.image-holder img:hover{
-    filter: none;
-    opacity: 1;
-}
-
-.image-holder {
-    padding: 1.3em 0 0 .85em;
-}
-
-@media (min-width: 980px) {
-    .about-flexbox {
+    /*    Styling   */
+    .side_styleContainer .email_linkWrapper {
         display: flex;
-        -webkit-box-pack: justify;
-        justify-content: space-between;
-        -webkit-box-align: center;
-        align-items: flex-start;
+        position: fixed;
+        bottom: 0;
+        left: auto;
+        right: 40px;
+        writing-mode: vertical-rl;
+        z-index: 10;
     }
-
-    .about__img {
-        min-width: 250px;
-        align-items: center;
+    .side_styleContainer .email_linkWrapper::after {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 10em;
+        background-color: var(--clr-light);
+        margin: 10px auto 0;
+    }
+    .email_linkWrapper .link {
+        color: var(--clr-light);
+        font-size: 15px;
     }
 }
-
-.section__subtitle--container--skills {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(120px, 200px));
+@media screen and (max-width: 700px) {
+    .intro {
+        padding: 9em 0;
+    }
+    .intro h2,.intro h3 {
+        font-size: 60px;
+    }
+    section {
+        padding: 6em 0;
+    }
+    .section__title {
+        font-size: 1.25rem;
+    }
+    /*    Job tab list    */
+    .tabs .tab-header {
+        border-bottom:1px solid var(--clr-darkest-bg);
+        flex-direction: row;
+        overflow-x: scroll;
+    }
+    .tabs .tab-header div {
+        font-size:var(--fs-body);
+        color:var(--clr-heading);
+        cursor:pointer;
+        flex: 0 0 auto;
+        padding: 0 10px 5px;
+    }
+    .tabs .tab-indicator {
+        left: auto;
+        height:2px;
+        max-width: 70px;
+        bottom: 0;
+        background:var(--clr-accent);
+        transition:all 500ms ease-in-out;
+    }
+    .tabs .tab-content > div {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        text-align:left;
+        padding-top: 10px;
+        transform: scale(0.9);
+        top:-200%;
+    }
 }
-
-.section__subtitle--container--skills li::before {
-    content: "✫";
-    position: relative;
-    left: 0;
-    color: var(--clr-accent);
-    font-size: 10px;
-    line-height: 15px;
-    padding: 12px 12px;
-}
-
-/*
-* ============ Job Tab List ================
-*/
-
 @media screen and (min-width: 700px) {
     .tabs .tab-header {
         float:left;
@@ -484,188 +501,55 @@ a.nav__link {
     }
 }
 
-.my-experiences {
-    position: relative;
-    margin: 0 auto;
-    max-width: 900px;
-}
-
-.tabs {
-    display: block;
-    position:relative;
-    max-width:700px;
-    height:55vh;
-    padding:30px 0;
-    overflow:hidden;
-}
-
-.tabs .tab-header > div:hover,
-.tabs .tab-header > div.active {
-    color:var(--clr-accent);
-}
-
-.tabs .tab-content {
-    position:relative;
-    height:100%;
-    overflow:hidden;
-}
-
-.tabs .tab-content > div.active {
-    top:0;
-    transform: scale(1);
-}
-.section__subtitle--container li {
-    list-style-position: outside;
-}
-
-.section__subtitle--container li::before {
-    content: "✫";
-    position: relative;
-    left: 0;
-    color: var(--clr-accent);
-    font-size: 10px;
-    line-height: 15px;
-    padding: 10px 10px;
-}
-
-@media screen and (max-width: 700px) {
-    .tabs {
-        max-height: 200vh;
+@media screen and (max-width: 500px) {
+    .main-container {
+        padding: 0 32px;
     }
-    .tabs .tab-header {
-        display: flex;
-        min-width:120px;
-        top: auto;
-        border-bottom:1px solid var(--clr-darkest-bg);
-        padding-bottom: 15px;
+    .intro {
+        padding: 7.5em 0;
     }
-    .tabs .tab-header > div {
-        overflow-x: scroll;
-        height:50px;
-        line-height:50px;
-        font-size:var(--fs-body);
-        color:var(--clr-heading);
-        cursor:pointer;
-        padding:10px 15px;
+    .intro h1 {
+        font-size: 14px;
+        padding-bottom: 5px;
     }
-    .tabs .tab-indicator {
-        top: auto;
-        height:2px;
-        max-width: 70px;
-        bottom: 0;
-        background:var(--clr-accent);
-        transition:all 500ms ease-in-out;
+    .intro h2,.intro h3 {
+        font-size: 40px;
     }
-    .tabs .tab-content > div {
-        position: absolute;
-        width: 100%;
-        height: auto;
-        text-align:left;
-        padding-top: 10px;
-        transform: scale(0.9);
-        top:-200%;
+    section {
+        padding: 6em 0;
     }
-}
-/* ============== contact section ============== */
-
-.my-contact {
-    text-align: center;
-    max-width: 600px;
-    padding: 150px 0;
-    margin: 0 auto 100px;
-}
-
-
-/* ============== footer ============== */
-.footer__container {
-    display: flex;
-    width: 100%;
-    min-height: 70px;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    flex-direction: column;
-    background: var(--clr-dark-bg);
-    text-align: center;
-    padding: 3em;
-}
-
-.metadata {
-    color: var(--clr-accent);
-    font-weight: 500;
-    font-size: var(--fs-body);
-    font-family: Monaco, monospace;
-}
-
-.footer__container .metadata p {
-    margin: 0;
-}
-
-a :hover,
-.social-list__link:hover,
-.email:hover,
-.nav__link:hover,
-.nav__resumeButton:hover,
-.email_linkWrapper:hover,
-.contact-btn:hover{
-    opacity: .7;
-}
-
-.social-list {
-    display: flex;
-    justify-content: center;
-}
-
-.social-list__link {
-    margin: 0 7px;
-}
-
-.social-list__item {
-    margin: 0 1em;
-}
-
-
-/* =============== Styling =============== */
-@media(min-width: 843px) {
-
-    .side_styleContainer .email_linkWrapper {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: auto;
-        right: 40px;
-        writing-mode: vertical-rl;
-        z-index: 10;
-    }
-
-    .side_styleContainer .email_linkWrapper::after {
-        content: "";
+    /* make the button small*/
+    .nav__resume,.email,.contact-btn {
         display: inline-block;
-        width: 1px;
-        height: 10em;
-        background-color: var(--clr-light);
-        margin: 10px auto 0;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--clr-accent);
+        border-radius: 3px;
     }
-
-    .email_linkWrapper .link {
-        color: var(--clr-light);
-        font-size: 15px;
+    .email,.contact-btn {
+        margin-top: 50px;
+        padding: 1rem 1.25rem;
     }
-}
-
-@media(max-width: 843px) {
-    .side_styleContainer {
-        display: none;
+    .email a,.contact-btn a{
+        font-size: 12px;
     }
 }
-
-
-
-
-
-
-
-
-
+@media screen and (min-width: 400px) {
+    .nav__resume,.email,.contact-btn {
+        display: inline-block;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--clr-accent);
+        border-radius: 3px;
+    }
+    .email,.contact-btn {
+        margin-top: 50px;
+        padding: 1.25rem 1.75rem;
+    }
+}
+@media screen and (max-width: 320px){
+    .intro {
+        padding: 4.5em 0;
+    }
+}
 
