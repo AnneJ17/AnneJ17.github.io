@@ -155,7 +155,7 @@ a.nav__link {
 .section__title--passion {
     color: var(--clr-light);
 }
-.section__title--about::after,.section__title--experiences::after {
+.section__title--about::after,.section__title--experiences::after,.section__title--projects::after {
     display: inline-block;
     content: "";
     border-top: .15rem solid var(--clr-darkest-bg);
@@ -221,6 +221,16 @@ a.nav__link {
     padding: 10px 10px;
 }
 
+/* ========================= PROJECTS ========================= */
+
+.portfolio {
+    
+}
+
+.portfolio img {
+    border-radius: 10px;
+    
+}
 /* ========================= CONTACT ========================= */
 
 .my-contact {
