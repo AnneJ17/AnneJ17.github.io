@@ -211,12 +211,26 @@ a.nav__link {
     top:0;
     transform: scale(1);
 }
+.section__subtitle--container li {
+    position: relative;
+    left: 0;
+    font-size: .9rem;
+    line-height: 15px;
+    padding: 5px 0px;
+    margin-left: 20px;
+}
 .section__subtitle--container li::before {
     content: "✫";
     position: relative;
     left: 0;
     color: var(--clr-accent);
     font-size: 10px;
+    line-height: 15px;
+    padding: 10px 10px;
+}
+/* Specific styles for paragraphs within the .active section */
+.active p {
+    font-size: .9rem;
     line-height: 15px;
     padding: 10px 10px;
 }
@@ -453,7 +467,7 @@ a :hover,
         scrollbar-width: none;  /* Firefox */
     }
     /* Hide scrollbar for Chrome, Safari and Opera */
-    .tabs .tab-header ::-webkit-scrollbar {
+    .tabs .tab-header::-webkit-scrollbar {
         display: none;
     }
     .tabs .tab-header div {
