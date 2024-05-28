@@ -245,6 +245,22 @@ a.nav__link {
     height: auto;
     margin-left: 20px; /* Space between title and image */
     margin-right: 20px;
+    cursor: pointer; /* Indicates clickable item */
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+.job-header .job-image img {
+    display: block;
+    width: 100%; /* Ensure the image scales properly */
+    height: auto;
+    -webkit-filter: brightness(65%) sepia(1) hue-rotate(174deg); /* Initial filter */
+    filter: brightness(65%) sepia(1) hue-rotate(174deg); /* Initial filter */
+    transition: filter 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.job-header .job-image img:hover {
+    filter: none; /* Remove filter on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 /* ========================= PROJECTS ========================= */
