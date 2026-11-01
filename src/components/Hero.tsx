@@ -70,7 +70,7 @@ export default function Hero() {
               {profile.intro}
             </p>
 
-            <ul className="mt-8 flex flex-wrap gap-x-2 gap-y-1">
+            <ul className="-ml-3 mt-8 flex flex-wrap gap-x-2 gap-y-1">
               {links.map((link) => {
                 const Icon = link.icon
                 return (

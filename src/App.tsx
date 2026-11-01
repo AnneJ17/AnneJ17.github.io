@@ -1,9 +1,9 @@
+import About from './components/About'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 
 // Temporary placeholder sections. We'll replace these one by one.
 const placeholders = [
-  { id: 'about', title: 'About', background: 'bg-white' },
   { id: 'work', title: 'Work', background: 'bg-cream' },
   { id: 'creative', title: 'Creative Corner', background: 'bg-white' },
   { id: 'contact', title: 'Say Hello!', background: 'bg-cream' },
@@ -15,6 +15,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <About />
 
         {placeholders.map((section) => (
           <section
