@@ -1,3 +1,4 @@
+import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 
 // Temporary placeholder sections. We'll replace these one by one.
@@ -13,19 +14,7 @@ export default function App() {
     <>
       <Navbar />
       <main>
-        <section
-          id="home"
-          className="mx-auto flex min-h-screen max-w-6xl scroll-mt-24 flex-col justify-center gap-6 px-6 pt-28"
-        >
-          <h1 className="text-5xl font-extrabold sm:text-7xl">
-            Hey There,
-            <br />
-            I&apos;m <span className="text-deep-teal">Anne!</span>
-          </h1>
-          <p className="max-w-xl text-lg">
-            Hero section coming next. For now, try the navigation bar above.
-          </p>
-        </section>
+        <Hero />
 
         {placeholders.map((section) => (
           <section

@@ -25,8 +25,9 @@ export default function Navbar() {
   }
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
-      <div className="mx-auto flex max-w-6xl items-center justify-between">
+    <header className="fixed inset-x-0 top-0 z-50 pt-4">
+      {/* Same width and side padding as the page sections, so everything lines up */}
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6">
         {/* Logo */}
         <button
           type="button"
@@ -82,29 +83,31 @@ export default function Navbar() {
 
       {/* Mobile menu panel */}
       {open && (
-        <nav
-          id="mobile-menu"
-          aria-label="Mobile"
-          className="mx-auto mt-3 max-w-6xl rounded-3xl bg-white p-3 shadow-lg md:hidden"
-        >
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              onClick={() => goTo(item.id)}
-              className="flex min-h-12 w-full items-center rounded-2xl px-4 text-left font-display text-xl font-semibold text-charcoal hover:bg-deep-teal/10 focus-visible:outline-2 focus-visible:outline-deep-teal"
-            >
-              {item.label}
-            </button>
-          ))}
-          <a
-            href={`mailto:${social.email}`}
-            className="mt-1 flex min-h-12 w-full items-center gap-3 rounded-2xl px-4 font-medium text-deep-teal hover:bg-deep-teal/10 focus-visible:outline-2 focus-visible:outline-deep-teal"
+        <div className="mx-auto mt-3 max-w-6xl px-6 md:hidden">
+          <nav
+            id="mobile-menu"
+            aria-label="Mobile"
+            className="rounded-3xl bg-white p-3 shadow-lg"
           >
-            <Mail size={20} aria-hidden="true" />
-            {social.email}
-          </a>
-        </nav>
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => goTo(item.id)}
+                className="flex min-h-12 w-full items-center rounded-2xl px-4 text-left font-display text-xl font-semibold text-charcoal hover:bg-deep-teal/10 focus-visible:outline-2 focus-visible:outline-deep-teal"
+              >
+                {item.label}
+              </button>
+            ))}
+            <a
+              href={`mailto:${social.email}`}
+              className="mt-1 flex min-h-12 w-full items-center gap-3 rounded-2xl px-4 font-medium text-deep-teal hover:bg-deep-teal/10 focus-visible:outline-2 focus-visible:outline-deep-teal"
+            >
+              <Mail size={20} aria-hidden="true" />
+              {social.email}
+            </a>
+          </nav>
+        </div>
       )}
     </header>
   )
