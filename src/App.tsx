@@ -21,9 +21,9 @@ export default function App() {
           <section
             key={section.id}
             id={section.id}
-            className={`${section.background} scroll-mt-24 px-6 py-24`}
+            className={`${section.background} scroll-mt-24 py-24`}
           >
-            <div className="mx-auto min-h-[50vh] max-w-6xl">
+            <div className="mx-auto min-h-[50vh] max-w-6xl px-6">
               <h2 className="text-4xl font-extrabold sm:text-5xl">
                 {section.title}
               </h2>
